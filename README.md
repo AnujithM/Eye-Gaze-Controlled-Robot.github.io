@@ -43,7 +43,7 @@ This mainly uses a monocular camera to create a grid-based environment to create
 
 3. **Grid and Adjacency List:** A grid overlay is created on the frame, dividing it into cells. An adjacency list is maintained to represent the connections between the grid cells.
 
-4. **Dynamic Pathfinding:** The global path planning algorithm finds a path from a source cell to a goal cell, avoiding cells containing hands (red centroids).
+4. **Dynamic A* Pathfinding:** The dynamic A* algorithm finds a path from a source cell to a goal cell, avoiding cells containing hands (red centroids).
 
 5. **Frame Annotation:** The segmented frame is annotated with the detected hands, grid cells, and the path found by the A* algorithm.
 
