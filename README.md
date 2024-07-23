@@ -51,9 +51,7 @@ This mainly uses a monocular camera to create a grid-based environment to create
 
 ## Results
 
-![](Planner/result1.png)
-![](Planner/result2.png)
-![](Planner/result1\3.png)
+![](Planner/result.png)
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
