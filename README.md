@@ -16,8 +16,8 @@ This mainly uses a monocular camera to create a grid-based environment to create
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/AnujithM/Eye Gaze-Controlled-Robot.git
-    cd Eye Gaze-Controlled-Robot
+    git clone https://github.com/AnujithM/Eye-Gaze-Controlled-Robot.github.io.git
+    cd Eye-Gaze-Controlled-Robot.github.io/Planner
     ```
 
 2. Install the required Python packages:
