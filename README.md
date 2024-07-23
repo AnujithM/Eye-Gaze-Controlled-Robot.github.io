@@ -1,13 +1,57 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# Grid-based dynamic planner using monocular camera vision.
 
-## Start using the template
-To start using the template click on `Use this Template`.
+Path planning algorithms and upper limb segmentation using instance segmentation models are utilized to generate obstacle-free trajectories to the printing locations, mitigating interference from hand and forearm.
+This mainly uses a monocular camera to create a grid-based environment to create trajectories for the robot to follow.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+## Requirements
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+- Python 3.x
+- OpenCV
+- NumPy
+- Requests
+- Supervision (sv)
+- Inference models (from `inference.models.utils`)
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/hand-segmentation-pathfinding.git
+    cd hand-segmentation-pathfinding
+    ```
+
+2. Install the required Python packages:
+    ```sh
+    pip install opencv-python-headless numpy requests supervision
+    ```
+
+## Usage
+
+1. Replace `model_id` and `api_key` in the script with your specific model ID and API key.
+
+2. Update the `url` variable with the correct MJPEG stream URL.
+
+3. Run the script:
+    ```sh
+    python main.py
+
+## How It Works
+
+1. **Fetch and Decode Frames:** The script continuously fetches frames from the specified MJPEG stream URL and decodes them using OpenCV.
+
+2. **Hand Segmentation:** The frames are passed through a hand segmentation model to detect and segment hands in the frame.
+
+3. **Grid and Adjacency List:** A grid overlay is created on the frame, dividing it into cells. An adjacency list is maintained to represent the connections between the grid cells.
+
+4. **Dynamic A* Pathfinding:** The dynamic A* algorithm finds a path from a source cell to a goal cell, avoiding cells containing hands (red centroids).
+
+5. **Frame Annotation:** The segmented frame is annotated with the detected hands, grid cells, and the path found by the A* algorithm.
+
+6. **Real-time Display:** The annotated frame is displayed in real-time, showing the segmented hands, grid, and path.
+
+## Results
+
+![](img/f10.png)
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
