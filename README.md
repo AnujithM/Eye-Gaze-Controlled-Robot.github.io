@@ -33,7 +33,7 @@ This mainly uses a monocular camera to create a grid-based environment to create
 
 3. Run the script:
     ```sh
-    python main.py
+    python DynamicAstar_V12.py
 
 ## How It Works
 
