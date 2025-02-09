@@ -1,5 +1,9 @@
 # Grid-based dynamic planner using monocular camera vision.
-
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python)  
+![OpenCV](https://img.shields.io/badge/OpenCV-4.x-red?style=flat-square&logo=opencv)  
+![NumPy](https://img.shields.io/badge/NumPy-1.x-blue?style=flat-square&logo=numpy)  
+![Build](https://img.shields.io/github/actions/workflow/status/AnujithM/Eye-Gaze-Controlled-Robot.github.io/ci.yml?label=Build&logo=githubactions)  
+![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=flat-square)  
 Path planning algorithms and upper limb segmentation using instance segmentation models are utilized to generate obstacle-free trajectories to the printing locations, mitigating interference from hand and forearm.
 This mainly uses a monocular camera to create a grid-based environment to create trajectories for the robot to follow.
 
